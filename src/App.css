@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/* 2. Configure Theme Variables */
+@theme {
+  /* Colors */
+  --color-primary: #4cb5ae; /* Teal (Light Mode Brand) */
+  --color-secondary: #c7f121; /* Lime (Dark Mode Brand) */
+
+  --color-page: #f8f8f8; /* Light Background */
+  --color-page-dark: #111111; /* Dark Background */
+
+  --color-surface-dark: #1a1c1e; /* Dark Card/Nav Background */
+  --color-muted: #837a75; /* Muted Text */
+
+  /* Fonts */
+  --font-syne: "Syne", sans-serif;
+  --font-sans: "DM Sans", sans-serif;
+}
+
+/* 3. Configure Dark Mode (Selector Strategy) 
+   This enables the manual class toggle ".dark" working in v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Base Styles */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-page);
+  color: var(--color-page-dark);
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+/* Dark Mode Base Overrides */
+:root.dark body {
+  background-color: var(--color-page-dark);
+  color: var(--color-page);
+}
+
+/* Selection Styles */
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+:root.dark ::selection {
+  background-color: var(--color-secondary);
+  color: black;
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-levitate {
+  animation: levitate 4s ease-in-out infinite;
+}
