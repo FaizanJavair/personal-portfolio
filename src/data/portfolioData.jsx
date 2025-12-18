@@ -1,3 +1,4 @@
+// 1. MAIN PORTFOLIO DATA (Selected Works + Bio)
 export const DATA = {
   hero: {
     title: "Faizan Javair",
@@ -6,55 +7,90 @@ export const DATA = {
   projects: [
     {
       name: "Pulsyte",
-      description: "One-page agency website with animations and 3D.",
+      description:
+        "One page website for a web agency made on react and advanced motion.",
       image: "/projects/pulsyte.png",
       stack: [
         "HTML",
         "CSS",
-        "Tailwind CSS", // Updated to match icon mapping key if needed, or keep "Tailwind" if mapped
+        "Tailwind CSS",
         "React",
         "ThreeJS",
         "EmailJS",
         "Framer Motion",
       ],
-      links: { live: "#", github: null },
+      links: { live: "https://pulsyte.com/", github: null },
     },
     {
       name: "Socializze",
-      description: "Full social media platform with posts, friends and chat.",
+      description:
+        "Social Media Platform where you can post, make friends and chat.",
       image: "/projects/social-media.png",
       stack: [
         "HTML",
         "CSS",
         "Bootstrap",
         "Django",
-        "Django Rest-Framework", // Mapped to DRF in icons
+        "Django Rest-Framework",
         "Python",
         "PostgreSQL",
         "Redis",
       ],
-      links: { live: null, github: "#" },
+      links: {
+        live: null,
+        github: "https://github.com/FaizanJavair/Socializze",
+      },
     },
     {
       name: "TickTrack",
-      description: "3-in-1 app — todo list, habit tracker, weather.",
+      description:
+        "A 3-in-1 App where you can make todo list, track habits and check weather updates.",
       image: "/projects/ticktrack.png",
       stack: [
         "React Native",
         "CSS",
-        "JavaScript",
+        "Javascript",
         "Firebase",
         "JSON",
         "OpenWeather API",
       ],
-      links: { live: "#", github: "#" },
+      links: {
+        live: "https://www.youtube.com/watch?v=03DLpGk_Rv4",
+        github: "https://github.com/FaizanJavair/TickTrack",
+      },
     },
     {
       name: "Weatherly",
-      description: "Mobile weather app with real-time data + forecasting.",
+      description:
+        "An intuitive mobile app that shows hourly, daily and current weather according to location.",
       image: "/projects/weatherly.png",
-      stack: ["React Native", "JavaScript", "CSS", "OpenWeather API"],
-      links: { live: "#", github: "#" },
+      stack: ["React Native", "Javascript", "CSS", "JSON", "OpenWeather API"],
+      links: {
+        live: "https://youtu.be/iN6SQHM4M9k",
+        github: "https://github.com/FaizanJavair/Weatherly_Weather-App",
+      },
+    },
+    {
+      name: "Kindle Review Sentiment Analysis",
+      description:
+        "Using Amazon Kindle Reviews to use VADER and Roberta Model to compare differences in sentiment analysis of each model.",
+      image: "/projects/kindle.png",
+      stack: ["Python", "VADER", "Roberta Model", "Transformers"],
+      links: {
+        live: "https://zesty-paletas-2bc009.netlify.app/",
+        github: null,
+      },
+    },
+    {
+      name: "Battle Space",
+      description:
+        "A top down 2D Shooter with rich features and amazing levels. [Group Project]",
+      image: "/projects/battle.png",
+      stack: ["Unity", "C#"],
+      links: {
+        live: "https://faizanjavair.itch.io/battle-space",
+        github: "https://github.com/neveensakr/games-development-t10",
+      },
     },
   ],
   experience: [
@@ -126,9 +162,9 @@ export const DATA = {
     email: "faizanjavair@gmail.com",
     github: "https://github.com/FaizanJavair",
     linkedin: "https://linkedin.com/in/faizan-j-827a2a146",
-    youtube: "https://www.youtube.com/@FaizanJavair", // Update with your actual link
-    instagram: "https://www.instagram.com/faizan.javair/", // Update with your actual link,
-    twitter: "https://twitter.com/FaizanJavair", // Update with your actual link
+    youtube: "https://www.youtube.com/@FaizanJavair",
+    instagram: "https://www.instagram.com/faizan.javair/",
+    twitter: "https://twitter.com/FaizanJavair",
     resume:
       "https://drive.google.com/file/d/1tc3hxWyss06ZEzscpzO2lzGU0-0ycpdy/view?usp=sharing",
     about: {
@@ -140,3 +176,181 @@ export const DATA = {
     },
   },
 };
+
+// 2. COMPLETE ARCHIVE (For AllProjects Page)
+// Mapped to match the schema: name, description, image, stack, links
+export const ALL_PROJECTS = [
+  {
+    name: "Pulsyte",
+    description:
+      "One page website for a web agency made on react and advanced motion.",
+    image: "/projects/pulsyte.png",
+    stack: [
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "React",
+      "ThreeJS",
+      "EmailJS",
+      "Framer Motion",
+    ],
+    links: { live: "https://pulsyte.com/", github: null },
+  },
+  {
+    name: "Socializze",
+    description:
+      "Social Media Platform where you can post, make friends and chat.",
+    image: "/projects/social-media.png",
+    stack: [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "Django",
+      "Django Rest-Framework",
+      "Python",
+      "PostgreSQL",
+      "Redis",
+    ],
+    links: { live: null, github: "https://github.com/FaizanJavair/Socializze" },
+  },
+  {
+    name: "TickTrack",
+    description:
+      "A 3-in-1 App where you can make todo list, track habits and check weather updates.",
+    image: "/projects/ticktrack.png",
+    stack: [
+      "React Native",
+      "CSS",
+      "Javascript",
+      "Firebase",
+      "JSON",
+      "OpenWeather API",
+    ],
+    links: {
+      live: "https://www.youtube.com/watch?v=03DLpGk_Rv4",
+      github: "https://github.com/FaizanJavair/TickTrack",
+    },
+  },
+  {
+    name: "Weatherly",
+    description:
+      "An intuitive mobile app that shows hourly, daily and current weather according to location.",
+    image: "/projects/weatherly.png",
+    stack: ["React Native", "Javascript", "CSS", "JSON", "OpenWeather API"],
+    links: {
+      live: "https://youtu.be/iN6SQHM4M9k",
+      github: "https://github.com/FaizanJavair/Weatherly_Weather-App",
+    },
+  },
+  {
+    name: "Sentiment Analysis - IMDB Dataset",
+    description:
+      "Training a model to conduct binary classification and analysing using average and precision values.",
+    image: "/projects/sentiment-bc.png",
+    stack: [
+      "Python",
+      "Keras",
+      "Matplotlib",
+      "Jupyter Notebook",
+      "Binary Classification",
+    ],
+    links: {
+      live: "https://delightful-figolla-730cb6.netlify.app/",
+      github: null,
+    },
+  },
+  {
+    name: "Wine Data Machine Learning - KNN",
+    description:
+      "Implementing KNN and conducting Cross-Validation using KNN. Seeing the difference in Euclidean and Manhattan distance function and comparing average and folds.",
+    image: "/projects/ml-knn.png",
+    stack: ["Python", "SciKit Learn"],
+    links: {
+      live: "https://comfy-mermaid-2e2392.netlify.app/",
+      github: null,
+    },
+  },
+  {
+    name: "Kindle Review Sentiment Analysis",
+    description:
+      "Using Amazon Kindle Reviews to use VADER and Roberta Model to compare differences in sentiment analysis of each model.",
+    image: "/projects/kindle.png",
+    stack: ["Python", "VADER", "Roberta Model", "Transformers"],
+    links: {
+      live: "https://zesty-paletas-2bc009.netlify.app/",
+      github: null,
+    },
+  },
+  {
+    name: "Battle Space",
+    description:
+      "A top down 2D Shooter with rich features and amazing levels. [Group Project]",
+    image: "/projects/battle.png",
+    stack: ["Unity", "C#"],
+    links: {
+      live: "https://faizanjavair.itch.io/battle-space",
+      github: "https://github.com/neveensakr/games-development-t10",
+    },
+  },
+  {
+    name: "Astronaut Data Modeling",
+    description:
+      "A simple website that does CRUD operation on astronaut modeled data.",
+    image: "/projects/astronaut.png",
+    stack: [
+      "HTML",
+      "Bootstrap",
+      "Javascript",
+      "EJS",
+      "MySQL",
+      "Express",
+      "NodeJS",
+    ],
+    links: {
+      live: null,
+      github: "https://github.com/FaizanJavair/Blogging-website-template/",
+    },
+  },
+  {
+    name: "OtoDecks DJ Application",
+    description: "A DJing application with two simultaneous tracks.",
+    image: "/projects/dj.png",
+    stack: ["C++", "JUCE"],
+    links: {
+      live: null,
+      github: "https://github.com/FaizanJavair/juce-dj-app/",
+    },
+  },
+  {
+    name: "Simple Blog Website",
+    description:
+      "A simple website that displays blogs in cards with custom front-end styling.",
+    image: "/projects/dailybugle.png",
+    stack: ["HTML", "CSS", "Javascript"],
+    links: {
+      live: "https://mellow-madeleine-e74cc0.netlify.app/",
+      github: "https://github.com/FaizanJavair/Blogging-website-template/",
+    },
+  },
+  {
+    name: "Pencil Man",
+    description: "Simple platformer game.",
+    image: "/projects/pencilmangame.png",
+    stack: ["Javascript", "p5.js", "HTML"],
+    links: {
+      live: "https://wondrous-cocada-a557b0.netlify.app/",
+      github: "https://github.com/FaizanJavair/pencilman/",
+    },
+  },
+  {
+    name: "Music Visualizer",
+    description:
+      "Music Visualizer that shows different music propeties such as treble, high mids etc. [Use Spacebar to see Menu or select options from 1-5 to see the Visuals]",
+    image: "/projects/music.png",
+    stack: ["Javascript", "p5.js", "HTML"],
+    links: {
+      live: "https://bejewelled-centaur-3e8397.netlify.app/",
+      github: null,
+    },
+  },
+];

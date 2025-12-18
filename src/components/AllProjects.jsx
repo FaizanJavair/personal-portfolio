@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { ExternalLink, Github, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import { DATA } from "../data/portfolioData";
+import { ALL_PROJECTS as DATA } from "../data/portfolioData";
 import {
   SiJavascript,
   SiPython,
@@ -214,7 +214,7 @@ const AllProjects = () => {
 
       {/* Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-        {DATA.projects.map((project, index) => (
+        {DATA.map((project, index) => (
           <ProjectCard key={index} project={project} index={index} />
         ))}
       </div>
