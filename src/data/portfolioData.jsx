@@ -166,7 +166,7 @@ export const DATA = {
     instagram: "https://www.instagram.com/faizan.javair/",
     twitter: "https://twitter.com/FaizanJavair",
     resume:
-      "https://drive.google.com/file/d/1M6TWxlIIg9EYxMoI948cdUezjarJc2gJ/view?usp=sharing",
+      "https://drive.google.com/file/d/12TfNOFkKO-iTYLqk1BuT09KO3xG995yM/view?usp=sharing",
     about: {
       image: "/pfp.webp",
       background:
