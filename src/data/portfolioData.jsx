@@ -9,7 +9,7 @@ export const DATA = {
       name: "Pulsyte",
       description:
         "One page website for a web agency made on react and advanced motion.",
-      image: "/projects/pulsyte.png",
+      image: "/projects/pulsyte.webp",
       stack: [
         "HTML",
         "CSS",
@@ -25,7 +25,7 @@ export const DATA = {
       name: "Socializze",
       description:
         "Social Media Platform where you can post, make friends and chat.",
-      image: "/projects/social-media.png",
+      image: "/projects/social-media.webp",
       stack: [
         "HTML",
         "CSS",
@@ -45,7 +45,7 @@ export const DATA = {
       name: "TickTrack",
       description:
         "A 3-in-1 App where you can make todo list, track habits and check weather updates.",
-      image: "/projects/ticktrack.png",
+      image: "/projects/ticktrack.webp",
       stack: [
         "React Native",
         "CSS",
@@ -63,7 +63,7 @@ export const DATA = {
       name: "Weatherly",
       description:
         "An intuitive mobile app that shows hourly, daily and current weather according to location.",
-      image: "/projects/weatherly.png",
+      image: "/projects/weatherly.webp",
       stack: ["React Native", "Javascript", "CSS", "JSON", "OpenWeather API"],
       links: {
         live: "https://youtu.be/iN6SQHM4M9k",
@@ -74,7 +74,7 @@ export const DATA = {
       name: "Kindle Review Sentiment Analysis",
       description:
         "Using Amazon Kindle Reviews to use VADER and Roberta Model to compare differences in sentiment analysis of each model.",
-      image: "/projects/kindle.png",
+      image: "/projects/kindle.webp",
       stack: ["Python", "VADER", "Roberta Model", "Transformers"],
       links: {
         live: "https://zesty-paletas-2bc009.netlify.app/",
@@ -85,7 +85,7 @@ export const DATA = {
       name: "Battle Space",
       description:
         "A top down 2D Shooter with rich features and amazing levels. [Group Project]",
-      image: "/projects/battle.png",
+      image: "/projects/battle.webp",
       stack: ["Unity", "C#"],
       links: {
         live: "https://faizanjavair.itch.io/battle-space",
@@ -168,7 +168,7 @@ export const DATA = {
     resume:
       "https://drive.google.com/file/d/1M6TWxlIIg9EYxMoI948cdUezjarJc2gJ/view?usp=sharing",
     about: {
-      image: "/pfp.jpg",
+      image: "/pfp.webp",
       background:
         "Specializing in the intersection of design and engineering. I build high-fidelity interfaces backed by robust architecture, delivering complete, scalable solutions.",
       approach:
@@ -184,7 +184,7 @@ export const ALL_PROJECTS = [
     name: "Pulsyte",
     description:
       "One page website for a web agency made on react and advanced motion.",
-    image: "/projects/pulsyte.png",
+    image: "/projects/pulsyte.webp",
     stack: [
       "HTML",
       "CSS",
@@ -200,7 +200,7 @@ export const ALL_PROJECTS = [
     name: "Socializze",
     description:
       "Social Media Platform where you can post, make friends and chat.",
-    image: "/projects/social-media.png",
+    image: "/projects/social-media.webp",
     stack: [
       "HTML",
       "CSS",
@@ -217,7 +217,7 @@ export const ALL_PROJECTS = [
     name: "TickTrack",
     description:
       "A 3-in-1 App where you can make todo list, track habits and check weather updates.",
-    image: "/projects/ticktrack.png",
+    image: "/projects/ticktrack.webp",
     stack: [
       "React Native",
       "CSS",
@@ -235,7 +235,7 @@ export const ALL_PROJECTS = [
     name: "Weatherly",
     description:
       "An intuitive mobile app that shows hourly, daily and current weather according to location.",
-    image: "/projects/weatherly.png",
+    image: "/projects/weatherly.webp",
     stack: ["React Native", "Javascript", "CSS", "JSON", "OpenWeather API"],
     links: {
       live: "https://youtu.be/iN6SQHM4M9k",
@@ -246,7 +246,7 @@ export const ALL_PROJECTS = [
     name: "Sentiment Analysis - IMDB Dataset",
     description:
       "Training a model to conduct binary classification and analysing using average and precision values.",
-    image: "/projects/sentiment-bc.png",
+    image: "/projects/sentiment-bc.webp",
     stack: [
       "Python",
       "Keras",
@@ -263,7 +263,7 @@ export const ALL_PROJECTS = [
     name: "Wine Data Machine Learning - KNN",
     description:
       "Implementing KNN and conducting Cross-Validation using KNN. Seeing the difference in Euclidean and Manhattan distance function and comparing average and folds.",
-    image: "/projects/ml-knn.png",
+    image: "/projects/ml-knn.webp",
     stack: ["Python", "SciKit Learn"],
     links: {
       live: "https://comfy-mermaid-2e2392.netlify.app/",
@@ -274,7 +274,7 @@ export const ALL_PROJECTS = [
     name: "Kindle Review Sentiment Analysis",
     description:
       "Using Amazon Kindle Reviews to use VADER and Roberta Model to compare differences in sentiment analysis of each model.",
-    image: "/projects/kindle.png",
+    image: "/projects/kindle.webp",
     stack: ["Python", "VADER", "Roberta Model", "Transformers"],
     links: {
       live: "https://zesty-paletas-2bc009.netlify.app/",
@@ -285,7 +285,7 @@ export const ALL_PROJECTS = [
     name: "Battle Space",
     description:
       "A top down 2D Shooter with rich features and amazing levels. [Group Project]",
-    image: "/projects/battle.png",
+    image: "/projects/battle.webp",
     stack: ["Unity", "C#"],
     links: {
       live: "https://faizanjavair.itch.io/battle-space",
@@ -296,7 +296,7 @@ export const ALL_PROJECTS = [
     name: "Astronaut Data Modeling",
     description:
       "A simple website that does CRUD operation on astronaut modeled data.",
-    image: "/projects/astronaut.png",
+    image: "/projects/astronaut.webp",
     stack: [
       "HTML",
       "Bootstrap",
@@ -314,7 +314,7 @@ export const ALL_PROJECTS = [
   {
     name: "OtoDecks DJ Application",
     description: "A DJing application with two simultaneous tracks.",
-    image: "/projects/dj.png",
+    image: "/projects/dj.webp",
     stack: ["C++", "JUCE"],
     links: {
       live: null,
@@ -325,7 +325,7 @@ export const ALL_PROJECTS = [
     name: "Simple Blog Website",
     description:
       "A simple website that displays blogs in cards with custom front-end styling.",
-    image: "/projects/dailybugle.png",
+    image: "/projects/dailybugle.webp",
     stack: ["HTML", "CSS", "Javascript"],
     links: {
       live: "https://mellow-madeleine-e74cc0.netlify.app/",
@@ -335,7 +335,7 @@ export const ALL_PROJECTS = [
   {
     name: "Pencil Man",
     description: "Simple platformer game.",
-    image: "/projects/pencilmangame.png",
+    image: "/projects/pencilmangame.webp",
     stack: ["Javascript", "p5.js", "HTML"],
     links: {
       live: "https://wondrous-cocada-a557b0.netlify.app/",
@@ -346,7 +346,7 @@ export const ALL_PROJECTS = [
     name: "Music Visualizer",
     description:
       "Music Visualizer that shows different music propeties such as treble, high mids etc. [Use Spacebar to see Menu or select options from 1-5 to see the Visuals]",
-    image: "/projects/music.png",
+    image: "/projects/music.webp",
     stack: ["Javascript", "p5.js", "HTML"],
     links: {
       live: "https://bejewelled-centaur-3e8397.netlify.app/",

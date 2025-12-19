@@ -12,7 +12,7 @@ const SERVICES_DATA = [
     title: "Software Development",
     description:
       "I craft robust and scalable digital solutions, bridging the gap between complex backend logic and intuitive frontend interactions to build complete applications from the ground up.",
-    imageSrc: "/soft.png",
+    imageSrc: "/soft.webp",
     imageAlt: "Software Development",
     features: [
       "Full-stack Development",
@@ -27,7 +27,7 @@ const SERVICES_DATA = [
     title: "Web3 Contract Integrations",
     description:
       "I connect traditional web applications with the blockchain ecosystem. I specialize in integrating smart contracts into front-end interfaces, ensuring secure and seamless decentralized user experiences.",
-    imageSrc: "/web3.png",
+    imageSrc: "/web3.webp",
     imageAlt: "Web3 Integration",
     features: [
       "Smart Contract Integration",
@@ -42,7 +42,7 @@ const SERVICES_DATA = [
     title: "UI/UX Design",
     description:
       "I believe code needs purpose. I design interfaces that are not just visually appealing but are intuitively usable, focusing on user flows and creating design systems that ensure consistency.",
-    imageSrc: "/ui.png",
+    imageSrc: "/ui.webp",
     imageAlt: "UI/UX Design",
     features: [
       "Interactive Prototyping",
@@ -57,7 +57,7 @@ const SERVICES_DATA = [
     title: "Content Creation",
     description:
       "Beyond code and design, I create digital assets and narratives. I run a YouTube channel where I simplify technical concepts, and I help brands grow through strategic social media management.",
-    imageSrc: "/youtube.png",
+    imageSrc: "/youtube.webp",
     imageAlt: "Content Creation",
     features: [
       "YouTube (2k+ Subs, 300k+ Views)",
