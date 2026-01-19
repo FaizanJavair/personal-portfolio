@@ -5,22 +5,22 @@ export const DATA = {
     subtitle: "Software Developer from planet Earth.",
   },
   projects: [
-    {
-      name: "Pulsyte",
-      description:
-        "One page website for a web agency made on react and advanced motion.",
-      image: "/projects/pulsyte.webp",
-      stack: [
-        "HTML",
-        "CSS",
-        "Tailwind CSS",
-        "React",
-        "ThreeJS",
-        "EmailJS",
-        "Framer Motion",
-      ],
-      links: { live: "https://pulsyte.com/", github: null },
-    },
+    // {
+    //   name: "Pulsyte",
+    //   description:
+    //     "One page website for a web agency made on react and advanced motion.",
+    //   image: "/projects/pulsyte.webp",
+    //   stack: [
+    //     "HTML",
+    //     "CSS",
+    //     "Tailwind CSS",
+    //     "React",
+    //     "ThreeJS",
+    //     "EmailJS",
+    //     "Framer Motion",
+    //   ],
+    //   links: { live: "https://pulsyte.com/", github: null },
+    // },
     {
       name: "Socializze",
       description:
@@ -180,22 +180,22 @@ export const DATA = {
 // 2. COMPLETE ARCHIVE (For AllProjects Page)
 // Mapped to match the schema: name, description, image, stack, links
 export const ALL_PROJECTS = [
-  {
-    name: "Pulsyte",
-    description:
-      "One page website for a web agency made on react and advanced motion.",
-    image: "/projects/pulsyte.webp",
-    stack: [
-      "HTML",
-      "CSS",
-      "Tailwind CSS",
-      "React",
-      "ThreeJS",
-      "EmailJS",
-      "Framer Motion",
-    ],
-    links: { live: "https://pulsyte.com/", github: null },
-  },
+  // {
+  //   name: "Pulsyte",
+  //   description:
+  //     "One page website for a web agency made on react and advanced motion.",
+  //   image: "/projects/pulsyte.webp",
+  //   stack: [
+  //     "HTML",
+  //     "CSS",
+  //     "Tailwind CSS",
+  //     "React",
+  //     "ThreeJS",
+  //     "EmailJS",
+  //     "Framer Motion",
+  //   ],
+  //   links: { live: "https://pulsyte.com/", github: null },
+  // },
   {
     name: "Socializze",
     description:
