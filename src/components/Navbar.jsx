@@ -1,11 +1,34 @@
 import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { useActiveSection } from "../hooks/useScroll";
 
 const Navbar = ({ darkMode, setDarkMode, navLinks }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const activeSection = useActiveSection(navLinks);
+  const [isScrollingUp, setIsScrollingUp] = useState(true);
+  
+  const location = useLocation();
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY < lastScrollY) {
+        setIsScrollingUp(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 10) {
+        setIsScrollingUp(false);
+      }
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
+  const activeSection = useActiveSection(navLinks, location.pathname);
 
   // Array of IDs that should trigger the navbar to hide
   // You can add more IDs here in the future
@@ -24,17 +47,35 @@ const Navbar = ({ darkMode, setDarkMode, navLinks }) => {
       }
     );
 
-    fullScreenSections.forEach((id) => {
-      const element = document.getElementById(id);
-      if (element) observer.observe(element);
-    });
+    const timeoutId = setTimeout(() => {
+      fullScreenSections.forEach((id) => {
+        const element = document.getElementById(id);
+        if (element) observer.observe(element);
+      });
+    }, 100);
 
-    return () => observer.disconnect();
-  }, []);
+    return () => {
+      clearTimeout(timeoutId);
+      observer.disconnect();
+    };
+  }, [location.pathname]);
 
   const scrollToSection = (name) => {
     // Convert "What I Do" -> "what-i-do"
     const id = name.toLowerCase().replace(/\s+/g, "-");
+    
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+      setMobileMenuOpen(false);
+      return;
+    }
+
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -44,10 +85,10 @@ const Navbar = ({ darkMode, setDarkMode, navLinks }) => {
 
   return (
     <nav
-      className={`fixed left-1/2 -translate-x-1/2 z-50 w-full md:w-max max-w-[90%] md:max-w-[90%] transition-all duration-700 ease-in-out ${
-        isVisible
-          ? "top-6 opacity-100 translate-y-0" // Visible State
-          : "-top-20 opacity-0 -translate-y-full" // Hidden State (Slide Up)
+      className={`fixed left-1/2 -translate-x-1/2 z-50 w-full md:w-max max-w-[90%] md:max-w-[90%] transition-all duration-700 ease-in-out top-6 translate-y-0 ${
+        !isVisible && !isScrollingUp
+          ? "opacity-30 hover:opacity-100" 
+          : "opacity-100"
       }`}
     >
       <div className="flex items-center justify-between gap-1 md:gap-2 px-2 py-2 md:px-3 md:py-2.5 rounded-full bg-white/80 dark:bg-surface-dark/80 backdrop-blur-md border border-zinc-200 dark:border-zinc-800 shadow-xl shadow-zinc-200/50 dark:shadow-black/50">

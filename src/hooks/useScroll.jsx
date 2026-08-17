@@ -1,9 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 
-export const useActiveSection = (sectionIds) => {
+export const useActiveSection = (sectionIds, pathname) => {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
+    if (pathname !== "/") {
+      setActiveSection("");
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -17,21 +22,19 @@ export const useActiveSection = (sectionIds) => {
       }
     );
 
-    sectionIds.forEach((id) => {
-      // Logic: Convert "What I Do" -> "what-i-do" to match HTML IDs
-      const formattedId = id.toLowerCase().replace(/\s+/g, "-");
-      const element = document.getElementById(formattedId);
-      if (element) observer.observe(element);
-    });
-
-    return () => {
+    const timeoutId = setTimeout(() => {
       sectionIds.forEach((id) => {
         const formattedId = id.toLowerCase().replace(/\s+/g, "-");
         const element = document.getElementById(formattedId);
-        if (element) observer.unobserve(element);
+        if (element) observer.observe(element);
       });
+    }, 100);
+
+    return () => {
+      clearTimeout(timeoutId);
+      observer.disconnect();
     };
-  }, [sectionIds]);
+  }, [sectionIds, pathname]);
 
   return activeSection;
 };

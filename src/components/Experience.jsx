@@ -108,10 +108,7 @@ const Experience = () => {
         if (i === 0) {
           d = `M ${currentX} ${currentY}`;
         } else {
-          const distanceY = currentY - prevY;
-          const cp1Y = prevY + distanceY * 0.5;
-          const cp2Y = currentY - distanceY * 0.5;
-          d += ` C ${prevX} ${cp1Y}, ${currentX} ${cp2Y}, ${currentX} ${currentY}`;
+          d += ` L ${currentX} ${currentY}`;
         }
 
         prevX = currentX;
@@ -225,17 +222,9 @@ const Experience = () => {
                     absolute z-20 w-4 h-4 rounded-full bg-page dark:bg-page-dark border-2 border-zinc-400 dark:border-zinc-500 shadow-sm
                     /* Mobile Positioning: Left Aligned */
                     left-0 top-0
-                    /* Desktop Positioning: Centered & Offset */
-                    md:top-9 md:left-1/2
+                    /* Desktop Positioning: Centered */
+                    md:top-9 md:left-1/2 md:-translate-x-1/2
                   `}
-                  style={{
-                    // Apply offset only on desktop
-                    marginLeft: isDesktop
-                      ? index % 2 === 0
-                        ? "-38px"
-                        : "22px"
-                      : "0px",
-                  }}
                 >
                   <div className="w-1.5 h-1.5 bg-primary dark:bg-secondary rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
                 </div>

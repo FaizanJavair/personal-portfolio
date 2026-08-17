@@ -37,7 +37,7 @@ const HeroAlternate = () => {
         <div className="relative order-2 md:order-2 flex justify-center group my-2 md:my-0">
           <Reveal>
             <div className="relative w-[80vw] h-[50vh] md:w-[25vw] md:h-[65vh] rounded-[2rem] overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-2xl">
-              <div className="absolute inset-0 bg-black/10 dark:bg-black/20 z-10 group-hover:bg-transparent transition-all duration-500"></div>
+              <div className="absolute inset-0 transition-all duration-500"></div>
               <img
                 src={DATA.contact.about.image}
                 alt="Profile"
