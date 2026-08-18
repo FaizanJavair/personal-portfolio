@@ -1,7 +1,7 @@
 import React from "react";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { DATA } from "../data/portfolioData";
+import { DATA, ALL_PROJECTS } from "../data/portfolioData";
 import {
   SiJavascript,
   SiPython,
@@ -206,7 +206,7 @@ const Projects = () => {
 
         {/* GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-          {DATA.projects.map((project, index) => (
+          {ALL_PROJECTS.filter((p) => p.isSelectedWork).map((project, index) => (
             <ProjectCard key={index} project={project} index={index} />
           ))}
         </div>
